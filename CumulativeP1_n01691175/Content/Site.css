@@ -1,0 +1,127 @@
+﻿/* Set padding to keep content from hitting the edges */
+
+body {
+    background-color: #232326;
+}
+
+a:link {
+    color: #ffffff;
+    text-decoration: none
+}
+
+a:visited {
+    color: #ffffff;
+    text-decoration: none
+}
+
+a:hover {
+    color: #ffffff;
+    text-shadow: 0px 0px 8px rgba(14, 117, 128, 1);
+    transition: 0.5s;
+    text-decoration: none
+}
+
+a:active {
+    color: #ffffff;
+    text-decoration: none
+}
+
+.body-content {
+    margin-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #ffffff;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.navbar{
+   margin-bottom:30px;
+}
+
+.navlink {
+    float: left;
+    background-color: #5a9eb5;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 23px 5px #07070d;
+}
+    .navlink:hover {
+        background-color: #67B5CF;
+        transition: 0.5s;
+        box-shadow: -1px 1px 25px 0px #00E5FF;
+    }
+
+.dellink {
+    float: right;
+    background-color: #b52626;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 23px 5px #07070d;
+}
+
+    .dellink:hover {
+        background-color: #F83434;
+        transition: 0.5s;
+        box-shadow: -1px 1px 25px 0px #fd4646;
+    }
+
+.listitem{
+    margin:10px 0;
+}
+
+.containershow {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 50px;
+    box-shadow: 5px 5px 23px 5px #07070d;
+    border-radius: 25px;
+    background-color: #232326;
+}
+
+.teacherList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 50px;
+    box-shadow: 5px 5px 23px 5px #07070d;
+    border-radius: 25px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.searchBar {
+    margin: 20px;
+}
+
+input[type=submit] {
+    background-color: #5a9eb5;
+    color: #ffffff;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 23px 5px #07070d;
+    border:none;
+}
+
+    input[type=submit]:hover {
+        background-color: #67B5CF;
+        transition: 0.5s;
+        box-shadow: -1px 1px 25px 0px #00E5FF;
+    }
