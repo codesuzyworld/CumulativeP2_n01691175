@@ -94,6 +94,8 @@ textarea {
     box-shadow: 5px 5px 23px 5px #07070d;
     border-radius: 25px;
     background-color: #232326;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .teacherList {
@@ -125,3 +127,30 @@ input[type=submit] {
         transition: 0.5s;
         box-shadow: -1px 1px 25px 0px #00E5FF;
     }
+
+
+.newTeacher {
+    float: right;
+    background-color: #5a9eb5;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 23px 5px #07070d;
+}
+
+    .newTeacher:hover {
+        background-color: #67B5CF;
+        transition: 0.5s;
+        box-shadow: -1px 1px 25px 0px #00E5FF;
+    }
+
+.deleteconfirm {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

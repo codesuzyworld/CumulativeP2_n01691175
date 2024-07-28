@@ -5,13 +5,18 @@
 
 <h1>List of Teachers</h1>
 
-<div class="searchBar">
-    <form action="/Teacher/List" method="GET">
-        <input type="text" name="SearchKey" autocomplete="off" />
-        <input type="submit" value="Search By Name" />
-    </form>
-</div>
 
+
+<nav class="navbar">
+    <div class="searchBar">
+        <form action="/Teacher/List" method="GET">
+            <input type="text" name="SearchKey" autocomplete="off" />
+            <input type="submit" value="Search By Name" />
+        </form>
+    </div>
+    <a class="navlink" href="/Teacher/New">New Teacher</a>
+
+</nav>
 
 <div class="teacherList">
     @foreach (var teacher in Model)

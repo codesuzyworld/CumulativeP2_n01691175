@@ -6,6 +6,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using MySql.Data.MySqlClient;
+using System.Web.Http.Cors;
 
 
 namespace CumulativeP1_n01691175.Controllers
@@ -137,5 +138,56 @@ namespace CumulativeP1_n01691175.Controllers
             return SelectedTeacher;
         }
 
+        /// <summary>
+        /// Deletes an Author from the connected MySQL Database if the ID of that author exists.
+        /// </summary>
+        /// <param name="id">The ID of the author.</param>
+        /// <example>POST /api/TeacherData/DeleteTeacher/3</example>
+
+        [HttpPost]
+        public void DeleteTeacher(int id)
+        {
+            //Open connection to the database
+            MySqlConnection Connection = School.AccessDatabase();
+            Connection.Open();
+
+            // Make new query for database 
+            MySqlCommand Command = Connection.CreateCommand();
+
+            //SQL query here!
+            Command.CommandText = "Delete from teachers where teacherid=@id";
+            Command.Parameters.AddWithValue("@id", id);
+            Command.Prepare();
+
+            Command.ExecuteNonQuery();
+            Connection.Close();
+        }
+
+        [HttpPost]
+        [EnableCors(origins: "*", methods: "*", headers: "*")]
+        public void AddTeacher([FromBody] Teacher NewTeacher)
+        {
+            //Open connection to the database
+            MySqlConnection Connection = School.AccessDatabase();
+            Connection.Open();
+
+            // Make new query for database 
+            MySqlCommand Command = Connection.CreateCommand();
+
+            //SQL query here!
+            string query = "INSERT INTO teachers (teacherfname, teacherlname, employeenumber, hiredate, salary) values (@TeacherFname,@TeacherLname, @EmployeeNumber, CURRENT_DATE(), @Salary)";
+            Command.CommandText = query;
+
+            Command.Parameters.AddWithValue("@TeacherFname", NewTeacher.TeacherFname);
+            Command.Parameters.AddWithValue("@TeacherLname", NewTeacher.TeacherLname);
+            Command.Parameters.AddWithValue("@EmployeeNumber", NewTeacher.EmployeeNumber);
+            Command.Parameters.AddWithValue("@Salary", NewTeacher.Salary);
+
+            Command.Prepare();
+
+            Command.ExecuteNonQuery();
+
+            Connection.Close();
+        }
     }
 }
