@@ -154,3 +154,10 @@ input[type=submit] {
     flex-direction: column;
     gap: 10px;
 }
+
+
+.newTeacherBtn{
+    display:flex;
+    flex-direction:row;
+    gap:20px;
+}

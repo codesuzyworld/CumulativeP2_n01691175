@@ -29,7 +29,7 @@ function AddTeacher() {
 	rq.onreadystatechange = function () {
 
 		if (rq.readyState == 4 && rq.status == 200) {
-			console.log("Sent unsuccessful");
+			console.log("Sent successfully");
 		} else
 			console.log("Failed: " + rq.status + " - " + rq.statusText);
 		}
@@ -37,4 +37,5 @@ function AddTeacher() {
 
 	//POST information sent through the .send() method
 	rq.send(JSON.stringify(TeacherData));
+
 }
