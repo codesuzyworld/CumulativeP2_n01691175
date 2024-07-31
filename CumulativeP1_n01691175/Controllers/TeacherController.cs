@@ -92,5 +92,10 @@ namespace CumulativeP1_n01691175.Controllers
         }
 
 
+        public ActionResult Ajax_New()
+        {
+            return View();
+
+        }
     }
 }

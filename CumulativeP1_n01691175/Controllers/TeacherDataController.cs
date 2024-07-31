@@ -145,6 +145,7 @@ namespace CumulativeP1_n01691175.Controllers
         /// <example>POST /api/TeacherData/DeleteTeacher/3</example>
 
         [HttpPost]
+        [Route("api/TeacherData/DeleteTeacher/{id}")]
         public void DeleteTeacher(int id)
         {
             //Open connection to the database
@@ -164,8 +165,9 @@ namespace CumulativeP1_n01691175.Controllers
         }
 
         [HttpPost]
+        [Route("api/TeacherData/AddTeacher")]
         [EnableCors(origins: "*", methods: "*", headers: "*")]
-        public void AddTeacher([FromBody] Teacher NewTeacher)
+        public void AddTeacher([FromBody]Teacher NewTeacher)
         {
             //Open connection to the database
             MySqlConnection Connection = School.AccessDatabase();

@@ -9,11 +9,12 @@ namespace CumulativeP1_n01691175.Models
     {
 
         //The following fields define a Teacher
-        public int TeacherId;
-        public string TeacherFname;
-        public string TeacherLname;
-        public string EmployeeNumber;
-        public string HireDate; 
-        public double Salary;
+        public int TeacherId { get; set; }
+        public string TeacherFname { get; set; }
+        public string TeacherLname { get; set; }
+        public string EmployeeNumber { get; set; }
+        public string HireDate { get; set; }
+        public double Salary { get; set; }
+        public Teacher() { }
     }
 }
